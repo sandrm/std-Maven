@@ -1,0 +1,46 @@
+[INFO] Scanning for projects...
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building studyMaven 0.0.1-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ studyMaven ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory D:\Dev\neon_ws\studyMaven\src\main\resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ studyMaven ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ studyMaven ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory D:\Dev\neon_ws\studyMaven\src\test\resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ studyMaven ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ studyMaven ---
+[INFO] Surefire report directory: D:\Dev\neon_ws\studyMaven\target\surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running org.sandrm.studyMaven.AppTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 sec
+
+Results :
+
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] 
+[INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ studyMaven ---
+[INFO] 
+[INFO] --- maven-install-plugin:2.4:install (default-install) @ studyMaven ---
+[INFO] Installing D:\Dev\neon_ws\studyMaven\target\studyMaven-0.0.1-SNAPSHOT.jar to C:\Users\sandr\.m2\repository\org\sandrm\studyMaven\0.0.1-SNAPSHOT\studyMaven-0.0.1-SNAPSHOT.jar
+[INFO] Installing D:\Dev\neon_ws\studyMaven\pom.xml to C:\Users\sandr\.m2\repository\org\sandrm\studyMaven\0.0.1-SNAPSHOT\studyMaven-0.0.1-SNAPSHOT.pom
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 2.689 s
+[INFO] Finished at: 2018-01-27T16:15:31+02:00
+[INFO] Final Memory: 11M/155M
+[INFO] ------------------------------------------------------------------------
