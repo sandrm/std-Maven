@@ -6,6 +6,8 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
 
+import org.apache.log4j.Logger;
+
 /**
  * Refresh Maven!
  *
@@ -14,8 +16,10 @@ import java.util.Properties;
  * java -cp std-Maven-0.0.1-SNAPSHOT.jar org.sandrm.studyMaven.App
  */
 public class App {
+	final static Logger logger = Logger.getLogger(App.class);
+	
     public static void main( String[] args ){
-        System.out.println( "Refresh Maven!" );
+        System.out.println( "App is running!" );
         
     	Properties prop = new Properties();
     	InputStream input = null;
@@ -31,8 +35,10 @@ public class App {
     		
 			prop.load(input);
 			
-			System.out.println(prop.getProperty("param1"));
-			System.out.println(prop.getProperty("param2"));
+			//System.out.println(prop.getProperty("param1"));
+			//System.out.println(prop.getProperty("param2"));
+			logger.info("Loaded param1: " + prop.getProperty("param1"));
+			logger.info("Loaded param2: " + prop.getProperty("param2"));
 			
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
