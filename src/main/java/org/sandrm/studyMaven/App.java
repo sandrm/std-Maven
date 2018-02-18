@@ -24,8 +24,7 @@ public class App {
     	Properties prop = new Properties();
     	InputStream input = null;
     	
-    	logger.info("Test TC build #2: Feb 18");
-    	logger.info("Test TC build #2: Feb 18");
+    	logger.info("Test TC build #3: Feb 18");
     	
     	try {
 			//input = new FileInputStream("config.properties");
