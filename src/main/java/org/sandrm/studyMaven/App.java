@@ -20,6 +20,7 @@ public class App {
 	
     public static void main( String[] args ){
         System.out.println( "App is running!" );
+        System.out.println( "This is develop branch! v: 0.0.2.0-SNAPSHOT" );
         
     	Properties prop = new Properties();
     	InputStream input = null;
