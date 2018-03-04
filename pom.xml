@@ -87,7 +87,8 @@
             			<!-- <id>make-assembly</id> --> <!-- this is used for inheritance merges -->
             			<phase>packaging</phase> <!-- append to the packaging phase. -->
             			<goals>
-              				<goal>attached</goal> <!-- goals == mojos -->
+            				<goal>single</goal>
+              				<!-- <goal>attached</goal> --> <!-- goals == mojos -->
             			</goals>
           			</execution>
         		</executions>
