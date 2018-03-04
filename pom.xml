@@ -82,16 +82,28 @@
 					</descriptors>
 					<tarLongFileMode>posix</tarLongFileMode>
 				</configuration>
+<!-- 
 				<executions>
           			<execution>
-            			<id>myZip</id> <!-- this is used for inheritance merges -->
-            			<phase>package</phase> <!-- append to the packaging phase. -->
+            			<id>myZip</id> this is used for inheritance merges
+            			<phase>package</phase> append to the packaging phase.
             			<goals>
-            				<goal>single</goal>
-              				<!-- <goal>attached</goal> --> <!-- goals == mojos -->
+            				<goal>attached</goal> goals == mojos
             			</goals>
           			</execution>
         		</executions>
+ -->        		
+<!-- 
+        		<executions>
+          			<execution>
+            			<id>myZip</id>
+            			<phase>package</phase>
+            			<goals>
+            				<goal>single</goal>
+            			</goals>
+          			</execution>
+        		</executions>
+      -->   		
 			</plugin>
 		</plugins>
 		
