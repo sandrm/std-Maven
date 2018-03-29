@@ -4,7 +4,7 @@
 
   <groupId>org.sandrm.tutor</groupId>
   <artifactId>std-Maven</artifactId>
-  <version>0.0.2.0-SNAPSHOT</version>
+  <version>0.0.3.0-SNAPSHOT</version>
   <packaging>jar</packaging>
 
   <name>studyMaven</name>
@@ -12,6 +12,7 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+ 	<testproperty>This is a test property</testproperty>
   </properties>
 
   <dependencies>
@@ -40,10 +41,31 @@
  
   
  </dependencies>
-  
+ 
     <!-- Build Settings -->
   	<build>
 		<plugins>
+<!-- 		
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-antrun-plugin</artifactId>
+				<version>1.1</version>
+				<executions>
+					<execution>
+						<phase>validate</phase>
+						<goals>
+							<goal>run</goal>
+						</goals>
+						<configuration>
+							<tasks>
+								<echo>Displaying value of 'testproperty' property</echo>
+								<echo>[testproperty] ${testproperty}</echo>
+							</tasks>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+ -->		
 	  	<plugin>
 	   		<artifactId>maven-deploy-plugin</artifactId>
 	   		<version>2.8.1</version>
@@ -130,8 +152,6 @@
 	  <prerequisites>...</prerequisites>
 	  <repositories>...</repositories>
 	  <pluginRepositories>...</pluginRepositories>
-	  <distributionManagement>...</distributionManagement>
-	  <profiles>...</profiles>
   -->
   <distributionManagement>
     <!-- 
@@ -147,5 +167,26 @@
     <url>http://localhost:8081/nexus/content/repositories/snapshots</url>
   </snapshotRepository>
 </distributionManagement>
-  
+
+<profiles>
+	<profile>
+		<id>uat</id>
+		<properties>
+			<profileName>This is UAT environment</profileName>
+		</properties>
+		<activation>
+			<activeByDefault>true</activeByDefault>
+		</activation>
+	</profile>
+	<profile>
+		<id>prd</id>
+		<properties>
+			<profileName>This is PRD environment</profileName>
+		</properties>
+		<activation>
+			<activeByDefault>false</activeByDefault>
+		</activation>
+	</profile>
+</profiles>  
+
 </project>
