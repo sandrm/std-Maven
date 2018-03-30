@@ -119,9 +119,11 @@
         		<executions>
           			<execution>
             			<id>myZip</id>
-            			<phase>package</phase>
+<!--             			<phase>package</phase> -->
+            			<phase>deploy</phase>
             			<goals>
             				<goal>single</goal>
+            				
             			</goals>
           			</execution>
         		</executions> 		
