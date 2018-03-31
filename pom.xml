@@ -38,15 +38,20 @@
 
 	<!-- Build Settings -->
 	<build>
+
+		<!-- Ensures that the config.properties file is always loaded from the 
+			configuration directory of the active Maven profile. -->
+		<!-- ${basedir} -->
+		<!-- <filter>${basedir}/src/main/profiles/${build.profile.id}/config.properties</filter> -->
+	
+
 		<finalName>maven-properties-filtering</finalName>
 		<filters>
-			<!-- Ensures that the config.properties file is always loaded from the 
-				configuration directory of the active Maven profile. -->
-			<filter>profiles/${build.profile.id}/config.properties</filter>
-			<!-- ${basedir} -->
-			<!-- <filter>${basedir}/src/main/profiles/${build.profile.id}/config.properties</filter> -->
+			<!-- <filter>profiles/${build.profile.id}/config.properties</filter> -->
+			<filter>${basedir}/src/main/profiles/${build.profile.id}/config.properties</filter>
 		</filters>
-		
+
+ 		
 		<resources>
 <!-- 			<resource>
 				<directory>src/main/java</directory>
@@ -115,6 +120,31 @@
 				</executions>
  -->
  			</plugin>
+
+
+<!-- 			<plugin>
+			    <groupId>org.codehaus.mojo</groupId>
+			    <artifactId>properties-maven-plugin</artifactId>
+			    <version>1.0-alpha-2</version>
+			    <executions>
+			        <execution>
+			            any phase before your app deploys
+			            <phase>prepare-package</phase>
+			            <goals>
+			                <goal>set-system-properties</goal>
+			            </goals>
+ 			            <configuration>
+			                <properties>
+			                    <property>
+			                        <name>profileID</name>
+			                        <value>${build.profile.id}</value>
+			                    </property>
+			                </properties>
+			            </configuration>
+			        </execution>
+			    </executions>
+			</plugin>
+ -->
 
 <!-- 
 			<plugin>

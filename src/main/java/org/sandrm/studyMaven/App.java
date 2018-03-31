@@ -32,7 +32,7 @@ public class App {
     		//input = App.class.getResourceAsStream("//src//main//resources//config.properties");
     		
     		//Load a properties file from classpath
-    		input = App.class.getClassLoader().getResourceAsStream("config.properties");
+    		input = App.class.getClassLoader().getResourceAsStream("myapp.properties");
     		
     		
 			prop.load(input);
