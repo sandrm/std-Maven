@@ -42,8 +42,10 @@ public class App {
 			logger.info("Loaded param1: " + prop.getProperty("param1"));
 			logger.info("Loaded param2: " + prop.getProperty("param2"));
 
-			logger.info("Populate config.person.name: " + prop.getProperty("config.person.name"));
-			logger.info("Populate config.person.lastname: " + prop.getProperty("config.person.lastname"));
+			logger.info("Populate config.person.name: " + prop.getProperty("myapp.person.name"));
+			logger.info("Populate config.person.lastname: " + prop.getProperty("myapp.person.lastname"));
+			
+			logger.info("Populate ENVNAME: " + prop.getProperty("ENVNAME"));
 			
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
